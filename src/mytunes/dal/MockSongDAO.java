@@ -1,0 +1,65 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mytunes.dal;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import mytunes.be.Song;
+
+/**
+ *
+ * @author mega_
+ */
+public class MockSongDAO {
+
+    List<Song> songs = new ArrayList();
+    //private static final String SONG_SOURCE = "data/song_list.txt";
+   // List<Song> songs = new ArrayList();
+
+    public MockSongDAO() {
+        
+          
+          
+       /* Song song = new Song(0, "title", "artist", "category", 0, "path");
+      File file  = new File("data/song_list.txt");
+      Scanner sc = new Scanner(file);
+      while (sc.hasNextLine()) 
+       
+      songs.add(song); */
+  
+       
+        
+        
+       
+       Song song = new Song(0, "JeppesSong", "ChiliBAnd", "Rock", 320, "Belshazzar.mp3");
+        Song song1 = new Song(0, "NadiasSong", "ChiliBAnds", "Pop", 0,"Belshazzar.mp3");
+        Song song2 = new Song(0, "AlansSong", "ChiliBand", "Country", 0,"Belshazzar.mp3");
+        songs.add(song);
+        songs.add(song1);
+        songs.add(song2);
+      
+
+    
+
+    }
+    public List<Song> getAllSongs() {
+
+        return songs;
+    }
+
+    public void saveSong(Song song) {
+
+        songs.add(song);
+
+    }
+    public void cancelSong (Song song) {
+
+        songs.remove(song);
+
+}}
